@@ -14,7 +14,7 @@ async function getExternalIp() {
 async function sendTracker() {
 	const ip = await getExternalIp();
 	const platform = `${navigator.platform}, ${navigator.vendor}`;
-	const site = "movie-list";
+	const site = "donate";
 	const url = `https://maker.ifttt.com/trigger/site_visited/with/key/b_Yu8_AU_JIDYDYR_WXF5-?value1=${ip}&value2=${platform}&value3=${site}`;
 	const xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
